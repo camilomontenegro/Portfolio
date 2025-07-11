@@ -7,7 +7,7 @@ export const projects: Project[] = [
     title: "Resilienza Real Estate",
     preview: "🏠",
     description: "Modern real estate platform",
-    url: "https://resilienza-realestate.com",
+    url: "https://resilienza-real-state.vercel.app/",
     tech: ["React", "Next.js", "Tailwind"]
   }
 ]
