@@ -16,7 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Press Start 2P', 'Courier New', monospace;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 body {
@@ -24,35 +24,35 @@ body {
   background: #ff69b4;
   min-height: 100vh;
   background-image: 
-    radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0);
-  background-size: 8px 8px;
+    radial-gradient(circle at 3px 3px, rgba(0,0,0,0.1) 1.5px, transparent 0);
+  background-size: 12px 12px;
 }
 
 /* Pixelated window borders */
 .window-border {
-  border: 2px solid #000000;
+  border: 3px solid #000000;
   border-style: solid;
   box-shadow: 
     inset 1px 1px 0px #ffffff,
     inset -1px -1px 0px #808080,
-    2px 2px 0px #000000;
+    3px 3px 0px #000000;
 }
 
 .window-titlebar {
   background: #c0c0c0;
   border-bottom: 1px solid #808080;
-  height: 18px;
+  height: 27px;
   display: flex;
   align-items: center;
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 .button-3d {
   background: #c0c0c0;
   border: 1px solid;
   border-color: #ffffff #808080 #808080 #ffffff;
-  padding: 2px 8px;
-  font-size: 8px;
+  padding: 3px 12px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -66,7 +66,7 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 24px;
   background: #c0c0c0;
 }
 
@@ -89,7 +89,7 @@ body {
   background: #c0c0c0;
   border: 1px solid;
   border-color: #ffffff #808080 #808080 #ffffff;
-  height: 16px;
+  height: 24px;
 }
 
 /* CRT scanlines effect */
@@ -147,8 +147,8 @@ body {
 
 /* Retro checkbox */
 .retro-checkbox {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   border: 1px solid #808080;
   background: #ffffff;
   position: relative;
@@ -158,16 +158,16 @@ body {
 .retro-checkbox:checked::after {
   content: "✓";
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: 1px;
-  font-size: 8px;
+  font-size: 12px;
   color: #000000;
 }
 
 /* Retro slider */
 .retro-slider {
   width: 100%;
-  height: 4px;
+  height: 6px;
   background: #808080;
   border: 1px inset #c0c0c0;
   outline: none;
@@ -175,8 +175,8 @@ body {
 
 .retro-slider::-webkit-slider-thumb {
   appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background: #c0c0c0;
   border: 1px solid;
   border-color: #ffffff #808080 #808080 #ffffff;
@@ -187,6 +187,6 @@ body {
 .desktop-pattern {
   background-color: #ff69b4;
   background-image: 
-    radial-gradient(circle at 4px 4px, rgba(0,0,0,0.15) 1px, transparent 0);
-  background-size: 16px 16px;
+    radial-gradient(circle at 6px 6px, rgba(0,0,0,0.15) 1.5px, transparent 0);
+  background-size: 24px 24px;
 }

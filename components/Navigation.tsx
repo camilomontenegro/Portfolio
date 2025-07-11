@@ -8,16 +8,16 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ onMusicPlayerToggle }) => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-300 border-b-2 border-gray-600 h-6 flex items-center justify-between px-2">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-300 border-b-3 border-gray-600 h-9 flex items-center justify-between px-3">
       {/* Menu Bar */}
-      <div className="flex items-center space-x-4">
-        <button className="button-3d px-2 py-0 text-xs pixel-text">File</button>
-        <button className="button-3d px-2 py-0 text-xs pixel-text">Edit</button>
-        <button className="button-3d px-2 py-0 text-xs pixel-text">View</button>
-        <button className="button-3d px-2 py-0 text-xs pixel-text">Settings</button>
+      <div className="flex items-center space-x-6">
+        <button className="button-3d px-3 py-0 text-xs pixel-text">File</button>
+        <button className="button-3d px-3 py-0 text-xs pixel-text">Edit</button>
+        <button className="button-3d px-3 py-0 text-xs pixel-text">View</button>
+        <button className="button-3d px-3 py-0 text-xs pixel-text">Settings</button>
         <button 
           onClick={onMusicPlayerToggle}
-          className="button-3d px-2 py-0 text-xs pixel-text"
+          className="button-3d px-3 py-0 text-xs pixel-text"
         >
           Player
         </button>
@@ -30,10 +30,10 @@ const Navigation: React.FC<NavigationProps> = ({ onMusicPlayerToggle }) => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="button-3d w-6 h-4 flex items-center justify-center"
+            className="button-3d w-9 h-6 flex items-center justify-center"
             title={social.url}
           >
-            <social.icon size={8} className="text-black" />
+            <social.icon size={12} className="text-black" />
           </a>
         ))}
       </div>

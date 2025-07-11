@@ -4,35 +4,11 @@ import { Project, SocialLink } from '@/types'
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    preview: "🛒",
-    description: "React + Node.js shopping site",
-    url: "https://ecommerce-demo.vercel.app",
-    tech: ["React", "Node.js", "MongoDB"]
-  },
-  {
-    id: 2,
-    title: "Weather Dashboard", 
-    preview: "🌤️",
-    description: "Real-time weather tracking",
-    url: "https://weather-app.vercel.app",
-    tech: ["Vue.js", "API Integration"]
-  },
-  {
-    id: 3,
-    title: "Chat Application",
-    preview: "💬", 
-    description: "WebSocket real-time chat",
-    url: "https://chat-app.vercel.app",
-    tech: ["Socket.io", "Express"]
-  },
-  {
-    id: 4,
-    title: "Game Portfolio",
-    preview: "🎮",
-    description: "Mini games collection", 
-    url: "https://games.vercel.app",
-    tech: ["Canvas", "WebGL"]
+    title: "Resilienza Real Estate",
+    preview: "🏠",
+    description: "Modern real estate platform",
+    url: "https://resilienza-realestate.com",
+    tech: ["React", "Next.js", "Tailwind"]
   }
 ]
 

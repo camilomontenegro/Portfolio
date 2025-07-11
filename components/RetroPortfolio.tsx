@@ -92,18 +92,18 @@ const RetroPortfolio: React.FC = () => {
       />
 
       {/* Main Content */}
-      <div className="pt-8 p-4 relative z-10">
-        <div className="text-center mb-8">
-          <div className="window-border bg-white inline-block p-4 mb-4">
-            <div className="window-titlebar mb-2">
+      <div className="pt-12 p-6 relative z-10">
+        <div className="text-center mb-12">
+          <div className="window-border bg-white inline-block p-6 mb-6">
+            <div className="window-titlebar mb-3">
               <span className="pixel-text text-xs">WELCOME.EXE</span>
               <div className="ml-auto flex space-x-1">
-                <div className="w-3 h-3 bg-gray-400 button-3d"></div>
-                <div className="w-3 h-3 bg-gray-400 button-3d"></div>
-                <div className="w-3 h-3 bg-gray-400 button-3d"></div>
+                <div className="w-5 h-5 bg-gray-400 button-3d"></div>
+                <div className="w-5 h-5 bg-gray-400 button-3d"></div>
+                <div className="w-5 h-5 bg-gray-400 button-3d"></div>
               </div>
             </div>
-            <h1 className="pixel-text text-black text-lg mb-2">
+            <h1 className="pixel-text text-black text-lg mb-3">
               PORTFOLIO OS v1.0
             </h1>
             <p className="pixel-text text-black text-xs">Double-click windows to open • Use Player for music</p>
@@ -124,8 +124,8 @@ const RetroPortfolio: React.FC = () => {
       </div>
 
       {/* Taskbar */}
-      <div className="fixed bottom-0 left-0 right-0 h-8 bg-gray-300 border-t-2 border-gray-400 flex items-center px-2 z-50">
-        <button className="button-3d mr-2 px-2">Start</button>
+      <div className="fixed bottom-0 left-0 right-0 h-12 bg-gray-300 border-t-3 border-gray-400 flex items-center px-3 z-50">
+        <button className="button-3d mr-3 px-3">Start</button>
         <div className="flex-1"></div>
         <div className="pixel-text text-xs text-black">
           {new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
