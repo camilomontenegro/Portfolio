@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 8px;
+}
+
+body {
+  color: #000000;
+  background: #ff69b4;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0);
+  background-size: 8px 8px;
+}
+
+/* Pixelated window borders */
+.window-border {
+  border: 2px solid #000000;
+  border-style: solid;
+  box-shadow: 
+    inset 1px 1px 0px #ffffff,
+    inset -1px -1px 0px #808080,
+    2px 2px 0px #000000;
+}
+
+.window-titlebar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.button-3d {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 2px 8px;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.button-3d:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.button-3d:hover {
+  background: #d0d0d0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+  background: #c0c0c0;
+}
+
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+  border: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d0d0d0;
+}
+
+::-webkit-scrollbar-button {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  height: 16px;
+}
+
+/* CRT scanlines effect */
+.crt-effect {
+  position: relative;
+  background: #000000;
+}
+
+.crt-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.03) 2px,
+    rgba(255,255,255,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.crt-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 255, 0, 0.02) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  animation: scan 3s linear infinite;
+  z-index: 2;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Pixelated text effect */
+.pixel-text {
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+}
+
+/* Retro checkbox */
+.retro-checkbox {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #808080;
+  background: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+
+.retro-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  font-size: 8px;
+  color: #000000;
+}
+
+/* Retro slider */
+.retro-slider {
+  width: 100%;
+  height: 4px;
+  background: #808080;
+  border: 1px inset #c0c0c0;
+  outline: none;
+}
+
+.retro-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  cursor: pointer;
+}
+
+/* Desktop pattern */
+.desktop-pattern {
+  background-color: #ff69b4;
+  background-image: 
+    radial-gradient(circle at 4px 4px, rgba(0,0,0,0.15) 1px, transparent 0);
+  background-size: 16px 16px;
+}
