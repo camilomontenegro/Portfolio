@@ -17,6 +17,14 @@ export const projects: Project[] = [
     description: "Business analytics",
     url: "https://resilienza-dashboard.vercel.app/",
     tech: ["React", "Next.js", "Tailwind"]
+  },
+  {
+    id: 3,
+    title: "H&M",
+    preview: "👚",
+    description: "Clothing store website",
+    url: "https://h-m-mockup.vercel.app/",
+    tech: ["Javascript", "Html", "Css", "Supabase"]
   }
 ]
 
