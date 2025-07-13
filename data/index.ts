@@ -25,6 +25,14 @@ export const projects: Project[] = [
     description: "Clothing store website",
     url: "https://h-m-mockup.vercel.app/",
     tech: ["Javascript", "Html", "Css", "Supabase"]
+  },
+  {
+  id: 4,
+    title: "BrandMatch",
+    preview: "🐂",
+    description: "Cattle brand finder",
+    url: "https://brandmatch.onrender.com/",
+    tech: ["Javascript", "Python", "Html", "Css", "TensorFlow"]
   }
 ]
 
