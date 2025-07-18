@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Retro Portfolio | Your Name',
+  title: 'Retro Portfolio | Camilo Montenegro',
   description: 'A retro-style portfolio showcasing my projects',
   keywords: 'portfolio, developer, retro, projects, web development',
   authors: [{ name: 'Your Name' }],
