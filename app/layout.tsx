@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Retro Portfolio | Camilo Montenegro',
   description: 'A retro-style portfolio showcasing my projects',
   keywords: 'portfolio, developer, retro, projects, web development',
-  authors: [{ name: 'Your Name' }],
+  authors: [{ name: 'Camilo Montenegro' }],
   viewport: 'width=device-width, initial-scale=1',
 }
 
