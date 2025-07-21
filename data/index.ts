@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "H&M",
     preview: "👚",
     description: "Clothing store website",
-    url: "https://h-m-mockup.vercel.app/",
+    url: "https://hm2-seven.vercel.app/",
     tech: ["Javascript", "Html", "Css", "Supabase"]
   },
   {
