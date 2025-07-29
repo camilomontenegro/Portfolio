@@ -56,8 +56,8 @@ const RetroPortfolio: React.FC = () => {
   }, [draggedWindow])
 
   const getWindowPosition = (index: number) => {
-    const baseX = 100 + (index % 2) * 320
-    const baseY = 150 + Math.floor(index / 2) * 280
+    const baseX = 100 + index * 250
+    const baseY = 150
     const position = windowPositions[projects[index].id]
     return position || { x: baseX, y: baseY }
   }
