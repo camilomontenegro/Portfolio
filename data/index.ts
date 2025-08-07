@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "BrandMatch",
     preview: "🐂",
     description: "Cattle brand finder",
-    url: "https://brandmatch.onrender.com/",
+    url: "https://brandmatch-static.onrender.com",
     tech: ["Javascript", "Python", "Html", "Css", "TensorFlow"]
   }
 ]

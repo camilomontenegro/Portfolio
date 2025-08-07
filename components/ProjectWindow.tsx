@@ -29,33 +29,36 @@ const ProjectWindow: React.FC<ProjectWindowProps> = ({
     >
       {/* Window Title Bar */}
       <div className="window-titlebar">
-        <span className="pixel-text text-xs">{project.title.toUpperCase()}.EXE</span>
+        <span className="pixel-text text-xs text-white">{project.title.toUpperCase()}.EXE</span>
         <div className="ml-auto flex space-x-1">
-          <div className="w-5 h-5 bg-gray-400 button-3d"></div>
-          <div className="w-5 h-5 bg-gray-400 button-3d"></div>
-          <div className="w-5 h-5 bg-gray-400 button-3d"></div>
+          <div className="window-control-btn">_</div>
+          <div className="window-control-btn">□</div>
+          <div className="window-control-btn">×</div>
         </div>
       </div>
 
       {/* Window Content */}
-      <div className="window-content p-4">
+      <div className="window-content p-4 window-content-blue">
         {/* Preview Screen - Isometric style */}
         <div className="bg-black window-border h-36 mb-4 flex items-center justify-center relative overflow-hidden">
-          <div className="text-white text-4xl transform scale-y-75 -skew-x-12">{project.preview}</div>
-          <div className="absolute top-1 left-1 pixel-text text-green-400 text-xs">
+          <div className="retro-blue-text text-4xl transform scale-y-75 -skew-x-12">{project.preview}</div>
+          <div className="absolute top-1 left-1 pixel-text retro-blue-text text-xs">
             {project.title.toUpperCase()}.APP
+          </div>
+          <div className="absolute bottom-1 right-1 text-retro-cyan text-xs">
+            ████░░
           </div>
         </div>
 
         {/* Project Info */}
         <div className="mb-4">
-          <div className="window-border bg-gray-100 p-3 mb-3">
-            <div className="pixel-text text-xs text-black mb-1">DESCRIPTION:</div>
-            <p className="pixel-text text-xs text-black">{project.description}</p>
+          <div className="window-border bg-retro-blue-50 p-3 mb-3 border-retro-blue-400">
+            <div className="pixel-text text-xs text-retro-blue-800 mb-1">DESCRIPTION:</div>
+            <p className="pixel-text text-xs text-retro-blue-700">{project.description}</p>
           </div>
           <div className="flex flex-wrap gap-1">
             {project.tech.map((tech, i) => (
-              <div key={i} className="button-3d px-1 py-0">
+              <div key={i} className="button-3d px-2 py-1">
                 <span className="pixel-text text-xs">{tech}</span>
               </div>
             ))}
@@ -63,16 +66,16 @@ const ProjectWindow: React.FC<ProjectWindowProps> = ({
         </div>
 
         {/* Controls */}
-        <div className="window-border bg-gray-100 p-3">
+        <div className="window-border bg-retro-blue-50 p-3 border-retro-blue-400">
           <div className="flex items-center justify-between">
             <button
               onClick={() => onOpenProject(project.url)}
-              className="button-3d flex-1 py-1 px-3 flex items-center justify-center space-x-1"
+              className="button-3d flex-1 py-2 px-4 flex items-center justify-center space-x-2 blue-glow"
             >
               <span className="pixel-text text-xs">▶</span>
               <span className="pixel-text text-xs">RUN</span>
             </button>
-            <div className="button-3d w-9 h-9 ml-3 flex items-center justify-center">
+            <div className="button-3d w-10 h-10 ml-3 flex items-center justify-center">
               <span className="pixel-text text-xs">?</span>
             </div>
           </div>

@@ -21,74 +21,85 @@ body {
 
 body {
   color: #000000;
-  background: #ff69b4;
+  background: #0055AA;
   min-height: 100vh;
   background-image: 
-    radial-gradient(circle at 3px 3px, rgba(0,0,0,0.1) 1.5px, transparent 0);
-  background-size: 12px 12px;
+    radial-gradient(circle at 3px 3px, rgba(255,255,255,0.1) 1.5px, transparent 0),
+    linear-gradient(45deg, #0055AA 25%, #0066CC 25%, #0066CC 50%, #0055AA 50%, #0055AA 75%, #0066CC 75%);
+  background-size: 12px 12px, 24px 24px;
 }
 
 /* Pixelated window borders */
 .window-border {
-  border: 3px solid #000000;
+  border: 3px solid #1E3A8A;
   border-style: solid;
   box-shadow: 
-    inset 1px 1px 0px #ffffff,
-    inset -1px -1px 0px #808080,
-    3px 3px 0px #000000;
+    inset 2px 2px 0px #87CEEB,
+    inset -2px -2px 0px #0055AA,
+    3px 3px 0px #000080,
+    6px 6px 8px rgba(0,0,0,0.3);
 }
 
 .window-titlebar {
-  background: #c0c0c0;
-  border-bottom: 1px solid #808080;
-  height: 27px;
+  background: linear-gradient(90deg, #316AC5 0%, #4A90E2 50%, #316AC5 100%);
+  border-bottom: 2px solid #1E3A8A;
+  height: 30px;
   display: flex;
   align-items: center;
-  padding: 0 6px;
+  padding: 0 8px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
 .button-3d {
-  background: #c0c0c0;
-  border: 1px solid;
-  border-color: #ffffff #808080 #808080 #ffffff;
-  padding: 3px 12px;
+  background: linear-gradient(135deg, #4A90E2 0%, #316AC5 50%, #1E3A8A 100%);
+  border: 2px solid;
+  border-color: #87CEEB #0055AA #0055AA #87CEEB;
+  padding: 4px 14px;
   font-size: 12px;
   cursor: pointer;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  transition: all 0.1s ease;
 }
 
 .button-3d:active {
-  border-color: #808080 #ffffff #ffffff #808080;
+  border-color: #0055AA #87CEEB #87CEEB #0055AA;
+  background: linear-gradient(135deg, #1E3A8A 0%, #316AC5 50%, #4A90E2 100%);
+  transform: translateY(1px);
 }
 
 .button-3d:hover {
-  background: #d0d0d0;
+  background: linear-gradient(135deg, #5BA0F2 0%, #4176D5 50%, #2E4A9A 100%);
+  border-color: #9DDCF0 #0066CC #0066CC #9DDCF0;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 24px;
-  background: #c0c0c0;
+  background: #316AC5;
 }
 
 ::-webkit-scrollbar-track {
-  background: #c0c0c0;
-  border: 1px solid #808080;
+  background: linear-gradient(90deg, #1E3A8A, #316AC5);
+  border: 2px solid #0055AA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c0c0c0;
-  border: 1px solid;
-  border-color: #ffffff #808080 #808080 #ffffff;
+  background: linear-gradient(90deg, #4A90E2, #87CEEB);
+  border: 2px solid;
+  border-color: #CCCCFF #0055AA #0055AA #CCCCFF;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d0d0d0;
+  background: linear-gradient(90deg, #5BA0F2, #9DDCF0);
 }
 
 ::-webkit-scrollbar-button {
-  background: #c0c0c0;
-  border: 1px solid;
-  border-color: #ffffff #808080 #808080 #ffffff;
+  background: linear-gradient(90deg, #4A90E2, #316AC5);
+  border: 2px solid;
+  border-color: #87CEEB #0055AA #0055AA #87CEEB;
   height: 24px;
 }
 
@@ -125,7 +136,7 @@ body {
   bottom: 0;
   background: linear-gradient(
     transparent 0%,
-    rgba(0, 255, 0, 0.02) 50%,
+    rgba(0, 191, 255, 0.03) 50%,
     transparent 100%
   );
   pointer-events: none;
@@ -185,8 +196,73 @@ body {
 
 /* Desktop pattern */
 .desktop-pattern {
-  background-color: #ff69b4;
+  background-color: #0055AA;
   background-image: 
-    radial-gradient(circle at 6px 6px, rgba(0,0,0,0.15) 1.5px, transparent 0);
-  background-size: 24px 24px;
+    radial-gradient(circle at 6px 6px, rgba(255,255,255,0.15) 1.5px, transparent 0),
+    linear-gradient(45deg, #0055AA 25%, #0066CC 25%, #0066CC 50%, #0055AA 50%, #0055AA 75%, #0066CC 75%);
+  background-size: 24px 24px, 48px 48px;
+}
+
+/* Blue-themed UI Elements */
+.window-control-btn {
+  background: linear-gradient(135deg, #87CEEB 0%, #4A90E2 100%);
+  border: 1px solid;
+  border-color: #CCCCFF #1E3A8A #1E3A8A #CCCCFF;
+  width: 18px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #000080;
+  cursor: pointer;
+}
+
+.window-control-btn:hover {
+  background: linear-gradient(135deg, #9DDCF0 0%, #5BA0F2 100%);
+  box-shadow: inset 0 0 4px rgba(0,191,255,0.3);
+}
+
+.window-control-btn:active {
+  border-color: #1E3A8A #CCCCFF #CCCCFF #1E3A8A;
+  background: linear-gradient(135deg, #4A90E2 0%, #87CEEB 100%);
+}
+
+/* Blue taskbar */
+.taskbar-blue {
+  background: linear-gradient(180deg, #4A90E2 0%, #316AC5 50%, #1E3A8A 100%);
+  border-top: 2px solid #87CEEB;
+  box-shadow: 
+    inset 0 2px 4px rgba(135,206,235,0.3),
+    0 -2px 8px rgba(0,0,0,0.3);
+}
+
+/* Blue window content areas */
+.window-content-blue {
+  background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FF 100%);
+  border: 1px solid #87CEEB;
+}
+
+/* Blue navigation */
+.nav-blue {
+  background: linear-gradient(180deg, #5BA0F2 0%, #4A90E2 50%, #316AC5 100%);
+  border-bottom: 2px solid #1E3A8A;
+  box-shadow: 
+    inset 0 1px 0 rgba(135,206,235,0.4),
+    0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Enhanced glow effects */
+.blue-glow {
+  box-shadow: 
+    0 0 10px rgba(74, 144, 226, 0.5),
+    inset 0 1px 0 rgba(135, 206, 235, 0.3);
+}
+
+/* Retro blue text */
+.retro-blue-text {
+  color: #00BFFF;
+  text-shadow: 
+    0 0 4px rgba(0, 191, 255, 0.5),
+    1px 1px 2px rgba(0, 0, 0, 0.7);
 }

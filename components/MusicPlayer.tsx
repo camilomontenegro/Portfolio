@@ -22,43 +22,47 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   if (!showMusicPlayer) return null
 
   return (
-    <div className="fixed top-12 right-6 z-40 w-72 window-border bg-white">
+    <div className="fixed top-14 right-6 z-40 w-80 window-border bg-retro-blue-50 blue-glow">
       <div className="window-titlebar">
-        <span className="pixel-text text-xs">♪ PLAYER</span>
+        <span className="pixel-text text-xs text-white">♪ RETRO PLAYER</span>
         <div className="ml-auto flex space-x-1">
           <button
             onClick={onClose}
-            className="w-5 h-5 bg-gray-400 button-3d flex items-center justify-center text-xs"
+            className="window-control-btn"
           >
             ×
           </button>
         </div>
       </div>
       
-      <div className="p-4">
-        {/* CRT Screen showing beach scene */}
-        <div className="crt-effect bg-black h-36 mb-4 flex items-center justify-center relative overflow-hidden">
-          <div className="text-green-400 pixel-text text-xs absolute top-3 left-3">BEACH.AVI</div>
-          <div className="text-green-400 text-center">
-            <div className="pixel-text text-xs mb-1">▓▓▓▓▓ LOADING ▓▓▓▓▓</div>
-            <div className="text-xs">████████████</div>
-            <div className="text-xs mt-1">320x240 • 16 colors</div>
+      <div className="p-4 window-content-blue">
+        {/* CRT Screen showing music visualization */}
+        <div className="crt-effect bg-black h-40 mb-4 flex items-center justify-center relative overflow-hidden">
+          <div className="retro-blue-text pixel-text text-xs absolute top-3 left-3">MUSIC.VIS</div>
+          <div className="retro-blue-text text-center">
+            <div className="pixel-text text-xs mb-2">♪ ♫ ♪ AUDIO VIS ♪ ♫ ♪</div>
+            <div className="text-sm">████▓▓▓░░░██▓▓░</div>
+            <div className="text-xs mt-2">FREQ: 44.1kHz • STEREO</div>
+            <div className="text-xs text-retro-cyan">
+              {isPlaying ? '🎵 PLAYING 🎵' : '⏸ PAUSED'}
+            </div>
           </div>
         </div>
         
         {/* Track info card */}
-        <div className="window-border bg-white p-3 mb-4">
-          <div className="pixel-text text-xs mb-1">NOW PLAYING:</div>
-          <div className="pixel-text text-xs text-black">{musicTracks[currentTrack]}</div>
+        <div className="window-border bg-retro-blue-100 p-3 mb-4 border-retro-blue-400">
+          <div className="pixel-text text-xs text-retro-blue-800 mb-1">NOW PLAYING:</div>
+          <div className="pixel-text text-xs text-retro-blue-700">{musicTracks[currentTrack]}</div>
+          <div className="pixel-text text-xs text-retro-cyan mt-1">TRACK {currentTrack + 1} / {musicTracks.length}</div>
         </div>
         
         {/* Controls */}
-        <div className="flex items-center justify-center space-x-3 mb-4">
+        <div className="flex items-center justify-center space-x-4 mb-4">
           <button
             onClick={onTogglePlay}
-            className="button-3d w-18 h-12 flex items-center justify-center"
+            className="button-3d w-16 h-12 flex items-center justify-center blue-glow"
           >
-            <span className="pixel-text text-xs">{isPlaying ? '❚❚' : '▶'}</span>
+            <span className="pixel-text text-sm">{isPlaying ? '❚❚' : '▶'}</span>
           </button>
           <button
             onClick={onNextTrack}
@@ -70,13 +74,14 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
         
         {/* Volume slider */}
         <div className="flex items-center space-x-3">
-          <span className="pixel-text text-xs">VOL:</span>
-          <div className="flex-1 bg-gray-400 h-3 border border-gray-600">
+          <span className="pixel-text text-xs text-retro-blue-800">VOL:</span>
+          <div className="flex-1 bg-retro-blue-800 h-4 window-border">
             <div 
-              className="h-full bg-black transition-all duration-300"
-              style={{ width: isPlaying ? '60%' : '30%' }}
+              className="h-full bg-retro-gradient transition-all duration-300"
+              style={{ width: isPlaying ? '70%' : '40%' }}
             ></div>
           </div>
+          <span className="pixel-text text-xs text-retro-blue-700">{isPlaying ? '70' : '40'}%</span>
         </div>
       </div>
     </div>
