@@ -24,4 +24,4 @@ This one is also a demo for the Resilienza project, it works as a BI tool where 
 This is a clothing store demo that uses a database to show the available products on the front-end. Still a work in progress.
 
 ### -*BrandMatch* 
-I think this is one of my most complex projects so far. It is a cattle brand "recognition" system. For the training part I used a CNN (MobileNetV2) that generates embeddings and are stored in a vectorial database (ChromaDB). When I want to check is a certain cattle brand is in the system I just upload it through the minimalistic front-end and this image is also converted into embedding to then be compared with the others in the database, returning a similarity match.
+I think this is one of my most complex projects so far. It is a cattle brand "recognition" system. For the training part I used a CNN (MobileNetV2) that generates embeddings and stores them in a vectorial database (ChromaDB). When I want to check if a certain cattle brand is in the system I just upload it through the minimalistic front-end and this image is also converted into embedding to then be compared with the others in the database, returning a similarity match.
